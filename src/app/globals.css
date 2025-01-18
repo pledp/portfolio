@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+}
+
 .main-widget {
   height: 95dvh;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  height: 80dvh;
 }
