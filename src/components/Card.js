@@ -7,7 +7,7 @@ const Card = () => {
         lg:w-96 lg:sticky lg:top-10">
         {/* Top Half - Colored Section */}
             <div className="h-1/2 bg-orange-100 mx-10 my-5 items-center rounded-2xl flex">
-                <Image src={'/Signature.png'} alt="Signature" width="256" height="256" className='mx-auto'></Image>
+                <Image src={'/portfolio/Signature.png'} alt="Signature" width="256" height="256" className='mx-auto'></Image>
             </div>
 
             {/* Bottom Half - Content */}
