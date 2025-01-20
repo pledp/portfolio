@@ -2,7 +2,7 @@
 import React from 'react'
 
 const FadeInSection = ({
-  children,
+  children, className = "", threshold = 0.6
 }) => {
   const domRef = React.useRef();
   
@@ -19,14 +19,17 @@ const FadeInSection = ({
         // No need to keep observing:
         observer.unobserve(domRef.current);
       }
+    },
+    {
+      threshold,
     });
-    
+    console.log(threshold)
     observer.observe(domRef.current);
     
     return () => observer.disconnect();
   }, []);
 
-  return (<section ref={ domRef } className={ isVisible ? ' is-visible fade-section' : 'fade-section' }>{ children }</section>);
+  return (<section ref={ domRef } className={`${className} fade-section ${isVisible ? "is-visible" : ""}`}>{ children }</section>);
 };
 
 export default FadeInSection;
