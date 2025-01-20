@@ -28,7 +28,7 @@ body {
 
 .fade-section {
   opacity: 0;
-  transform: translate(1, -20);
+  transform: translate(1px, -20px);
   visibility: hidden;
   transition: opacity 2000ms ease-out, transform 700ms ease-out;
   will-change: opacity, visibility;
