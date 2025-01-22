@@ -9,13 +9,13 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "pled's portfolio.",
-  description: "just a portfolio",
+  title: "L-E. J. T - pled",
+  description: "just a simple portfolio",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${poppins.className} antialiased`}>
         {children}

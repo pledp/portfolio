@@ -23,7 +23,6 @@ const FadeInSection = ({
     {
       threshold: threshold,
     });
-    console.log(threshold)
     observer.observe(domRef.current);
     
     return () => observer.disconnect();

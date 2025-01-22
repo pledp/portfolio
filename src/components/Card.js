@@ -20,7 +20,7 @@ const Card = () => {
             i occasionally try to do some application/systems programming with rust or c/c++. mostly in the context of scuffed game frameworks/engines.
             </p>
             <p className="text-gray-900 mb-4 pt-5">
-            design patterns cool, try implement.
+            passioante about design patterns, try implement.
             </p>
         </FadeInSection>
     )
