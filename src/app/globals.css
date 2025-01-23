@@ -33,10 +33,14 @@ Image {
 
 .fade-section {
   opacity: 0;
-  transform: translate(0px, -30px);
+  transform: translate(0px, -20px);
   visibility: hidden;
   transition: opacity 1000ms ease-out, transform 500ms ease-out;
   will-change: opacity, visibility;
+}
+
+.fade-delay {
+  transition-delay: 200ms;
 }
 
 .is-visible {
@@ -47,4 +51,24 @@ Image {
 
 .rust-logo {
   filter: invert(100%);
+}
+
+.pattern-wave {
+  background-size: auto;
+  background-image: url("/portfolio/patterns/pattern-wave.svg");
+}
+
+.pattern-doodle {
+  background-size: 100% 100%;
+  background-image: url("/portfolio/patterns/pattern-doodle.svg");
+}
+
+.hero-text {
+  color:white;
+  mix-blend-mode: difference;
+}
+
+.dot {
+  mix-blend-mode: mix;
+  z-index: 0;
 }

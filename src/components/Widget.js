@@ -7,7 +7,7 @@ const Widgets = () => {
         <section className='text-white flex flex-col justify-center gap-12 mt-10 projects-widget'>
             <div className='flex flex-col items-center
             sm:flex-row'>
-                <FadeInSection>
+                <FadeInSection className='transition fade-delay'>
                     <h1 className='text-7xl font-bold'>5+</h1>
                     <div className='text-neutral-400'>
                         <p>YEARS PROGRAMMING</p>
@@ -15,7 +15,7 @@ const Widgets = () => {
                     </div>
                 </FadeInSection>
                 <div className='w-full'>
-                    <FadeInSection className='bg-green-100 rounded-2xl flex flex-col p-5 gap-5 mt-5'>
+                    <FadeInSection className='bg-green-100 rounded-2xl flex flex-col p-5 gap-5 mt-5 fade-delay pattern-wave'>
                         <h1 className='text-3xl font-bold text-black'>what i can kinda do - <span className='bg-red-100 text-white rounded-2xl px-4'>tierlist</span></h1>
 
                         <div className='w-full flex flex-row p-5 gap-5 items-center bg-black-100 rounded-2xl'>
@@ -53,10 +53,10 @@ const Widgets = () => {
                     </FadeInSection>
                 </div>
             </div>
-            <FadeInSection className='h-2 bg-white w-1/2 mx-auto rounded-2xl'></FadeInSection>
-            <FadeInSection>
+            <FadeInSection className='h-2 bg-white w-1/2 mx-auto rounded-2xl fade-delay'></FadeInSection>
+            <FadeInSection className='fade-delay'>
                 <h1 className='text-3xl font-bold'>what i've <span className='text-orange-200'>recently</span> been focusing on</h1>
-                <div className='bg-orange-200 w-full h-96 rounded-2xl mt-5 p-6 flex flex-col gap-16'>
+                <div className='bg-orange-200 w-full h-96 rounded-2xl mt-5 p-6 flex flex-col gap-16 pattern-doodle'>
                     <div className='items-end text-right flex flex-col gap-5'>
                         <h1 className='font-bold text-6xl'>mögl</h1>
                         <p>a work-in-progress game framework/engine.</p>

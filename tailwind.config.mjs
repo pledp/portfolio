@@ -34,7 +34,7 @@ export default {
         },
 
         green: {
-          100: '#c2f748'
+          100: '#ddffaa'
         }
       },
     },
