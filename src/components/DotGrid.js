@@ -22,7 +22,7 @@ const StaggeredGrid = ({className = ""}) => {
                 // Calculate distance from the center
                 const distance = Math.sqrt((col - centerX) ** 2 + (row - centerY) ** 2);
         
-                return distance/maxDistance * Math.random() * 0.8; 
+                return (distance/maxDistance) * 1.0; 
             },
             translateY: function (_, i) {
                 const row = Math.floor(i / GRID_WIDTH);
@@ -30,16 +30,20 @@ const StaggeredGrid = ({className = ""}) => {
                 const distance = Math.sqrt((col - centerX) ** 2 + (row - centerY) ** 2);
         
                 // Map distance to X movement (closer dots move more)
-                return (1 - distance / maxDistance) * 100 * Math.random() * 3;
+                return (Math.random() * 2 - 1) * distance/maxDistance * 200;
             },
             translateX: function (_, i) {
-                return (Math.random() * 2 - 1) * 100;
+                const row = Math.floor(i / GRID_WIDTH);
+                const col = i % GRID_WIDTH;
+                const distance = Math.sqrt((col - centerX) ** 2 + (row - centerY) ** 2);
+
+                return (Math.random() * 2 - 1) * distance/maxDistance * 400;
             },
 
             easing: "easeInOutQuad",
             duration: 5000,
             loop: true,
-            delay: anime.stagger(200, { grid: [GRID_WIDTH, GRID_HEIGHT], from: "center" }),
+            delay: anime.stagger(500, { grid: [GRID_WIDTH, GRID_HEIGHT], from: "center" }),
             direction: "alternate",
         });
     }, []);

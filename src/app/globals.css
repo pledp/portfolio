@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: #1a1716;
+  background-color: black;
 }
 
 * {
@@ -70,5 +70,4 @@ Image {
 
 .dot {
   mix-blend-mode: mix;
-  z-index: 0;
 }
