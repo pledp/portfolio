@@ -4,13 +4,14 @@ import StaggeredGrid from './DotGrid';
 const Hero = () => {
     return (
         <section className='main-widget bg-black w-full flex items-center overflow-hidden justify-center'>
-            <StaggeredGrid className="absolute top-50 left-50"/>
+            <StaggeredGrid className="absolute top-50 left-50 max-w-full overflow-hidden
+            sg:overflow-visible"/>
 
-            <div className=" text-black mx-12 flex flex-col items-center justify-center gap-10 relative rounded-2xl p-16  mix">
+            <div className=" text-black mx-12 flex flex-col items-center justify-center gap-10 relative rounded-2xl p-16 mix">
                 <div>
                     <div className='text-5xl hero-text
                     sm:text-6xl'>
-                        <h2 className="font-bold text-center hero-text whitespace-nowrap">L-E. J.<span className='italic px-6'>"pled"</span> T</h2>
+                        <h2 className="font-bold text-center hero-text">L-E. J.<span className='italic px-6'>"pled"</span> T</h2>
                     </div>
             
                     {/* Description */}
