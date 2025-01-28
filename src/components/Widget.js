@@ -5,7 +5,7 @@ import Project from './Project-Widget';
 
 const Widgets = () => {
     return (
-        <section className='text-white flex flex-col justify-center gap-12 mt-10 projects-widget w-full over'>
+        <section className='text-white flex flex-col justify-center gap-12 mt-10 projects-widget w-full'>
             <div className='flex flex-col items-center
             sm:flex-row'>
                 <FadeInSection className='transition fade-delay'>
@@ -28,7 +28,8 @@ const Widgets = () => {
                                 <Image src="/portfolio/images/cpp-logo.svg" width={80} height={80} alt="C++ logo"></Image>
                             </div>
                         </div>
-                        <div className='w-5/6 flex flex-row p-5 gap-5 items-center bg-black-100 rounded-2xl'>
+                        <div className='flex flex-row p-5 gap-5 items-center bg-black-100 rounded-2xl
+                        lg:w-5/6'>
                             <div><h1 className='text-3xl font-bold mr-10 bg-orange-300 p-5 rounded-2xl px-8'>A</h1></div>
                             <div className='flex flex-col gap-2'>
                                 <Image src="/portfolio/images/html-logo.svg" width="60" height="60" alt="HTML logo"></Image>
@@ -39,7 +40,8 @@ const Widgets = () => {
                                 <Image src="/portfolio/images/js-logo.svg" width="60" height="60" alt="JS logo"></Image>
                             </div>
                         </div>
-                        <div className='w-5/6 flex flex-row p-5 gap-5 items-center bg-black-100 rounded-2xl'>
+                        <div className='flex flex-row p-5 gap-5 items-center bg-black-100 rounded-2xl
+                        lg:w-5/6'>
                             <div><h1 className='text-3xl font-bold mr-10 bg-orange-400 p-5 rounded-2xl px-8'>B</h1></div>
                             <div>
                                 <Image src="/portfolio/images/csharp-logo.svg" width="50" height="50" alt="C# logo"></Image>
@@ -69,6 +71,7 @@ const Widgets = () => {
                 <div className='items-end mt-auto'>
                     <p>written in <span className='font-bold'>Rust</span> with winit and wgpu. written mostly as a Rust-learning-project. currently working on implementing plugins and ECS-type capabilities.</p>
                 </div>
+                <a href='https://github.com/pledp/moegl'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
             </Project>
 
             <FadeInSection className='h-2 bg-white w-1/2 mx-auto rounded-2xl fade-delay m-10'></FadeInSection>
@@ -78,30 +81,34 @@ const Widgets = () => {
             <div className='flex flex-col w-full gap-6'>
                 <div className='flex flex-col gap-6
                 sm:flex-row'>
-                    <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black gap-16 move-on-hover'>
+                    <Project className='rounded-2xl p-6 flex flex-col pattern-zig text-white gap-12 move-on-hover'>
                         <div className='flex flex-col gap-5'>
                             <h1 className='font-bold text-6xl'>smeagl</h1>
                             <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
                         </div>
-                        <p>C++ lerning project, made with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
+                        <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
+                        <a href='https://github.com/pledp/pledGL'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
+
                     </Project>
                     
-                    <Project className='rounded-2xl p-6 flex flex-col gap-16 h-full bg-white text-black move-on-hover'>
+                    <Project className='rounded-2xl p-6 flex flex-col gap-12 h-full bg-white text-black move-on-hover'>
                         <div className='items-end text-right flex flex-col gap-5'>
                             <h1 className='font-bold text-6xl'>robot.r</h1>
                             <p>a programming game built for an internship.</p>
                         </div>
                         <div className='items-end mt-auto'>
-                            <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language, written on-top of C#.</p>
+                            <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language written on-top of C#.</p>
                         </div>
+                        <a href='https://github.com/pledp/pLdev'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+
                     </Project>
                 </div>
                 <div className='flex flex-col gap-6
                 sm:flex-row'>
-                    <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black gap-10 h-full w-full move-on-hover'>
-                        <div className='flex flex-col gap-5'>
+                    <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black gap-10 h-full w-full move-on-hover pattern-tri'>
+                        <div className='flex flex-col gap-5 pt-5'>
                             <h1 className='font-bold text-5xl'>Clawmarks</h1>
-                            <p>1st year uni-project, a <span className='font-bold'>web-based puzzle game</span>.</p>
+                            <p>1st year uni project, a <span className='font-bold'>web-based puzzle game</span>.</p>
                         </div>
                         <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
                         <div className='flex flex-col gap-4'>
@@ -109,6 +116,7 @@ const Widgets = () => {
                             <p className='text-right'>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
                             <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
                         </div>
+                        <a href='https://github.com/pledp/clawmarks'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
                     </Project>
                 </div>
                 <h1 className='font-bold'>+ other smaller stuff*</h1>
