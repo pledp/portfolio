@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from "next/image";
-import FadeInSection from './scroll_effect';
-import Project from './Project-Widget';
+import FadeInSection from './scroll-effect-component';
+import Project from './project-component';
 
 const Widgets = () => {
     return (

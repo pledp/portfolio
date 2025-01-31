@@ -1,9 +1,9 @@
 
 import React from 'react'
 import Image from 'next/image';
-import Card from "@/components/Card";
-import Widgets from '@/components/Widget';
-import FadeInSection from '@/components/scroll_effect';
+import Card from "@/components/card";
+import Widgets from '@/components/widgets';
+import FadeInSection from '@/components/scroll-effect-component';
 
 const Projects = () => {
     return (

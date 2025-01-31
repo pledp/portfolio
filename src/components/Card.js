@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from 'react'
-import FadeInSection from "./scroll_effect";
+import FadeInSection from "./scroll-effect-component";
 
 const Card = () => {
     return(

@@ -1,5 +1,5 @@
 import React from 'react'
-import FadeInSection from './scroll_effect';
+import FadeInSection from './scroll-effect-component';
 
 const Project = ({
   children, className = ""

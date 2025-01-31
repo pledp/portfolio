@@ -1,5 +1,5 @@
 import React from 'react'
-import StaggeredGrid from './DotGrid';
+import StaggeredGrid from './dot-grid-component';
 
 const Hero = () => {
     return (
