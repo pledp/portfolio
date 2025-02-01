@@ -2,6 +2,7 @@ import React from 'react'
 import Image from "next/image";
 import FadeInSection from './scroll-effect-component';
 import Project from './project-component';
+import Expandable from './expandable-component';
 
 const Widgets = () => {
     return (
@@ -79,46 +80,44 @@ const Widgets = () => {
             <FadeInSection className='fade-delay'> <h1 className='text-3xl font-bold'>other stuff i've done</h1> </FadeInSection>
         
             <div className='flex flex-col w-full gap-6'>
-                <div className='flex flex-col gap-6
-                sm:flex-row'>
-                    <Project className='rounded-2xl p-6 flex flex-col pattern-zig text-white gap-12 move-on-hover'>
-                        <div className='flex flex-col gap-5'>
-                            <h1 className='font-bold text-6xl'>smeagl</h1>
-                            <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
-                        </div>
-                        <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
-                        <a href='https://github.com/pledp/pledGL'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
 
-                    </Project>
-                    
-                    <Project className='rounded-2xl p-6 flex flex-col gap-12 h-full bg-white text-black move-on-hover'>
-                        <div className='items-end text-right flex flex-col gap-5'>
-                            <h1 className='font-bold text-6xl'>robot.r</h1>
-                            <p>a programming game built for an internship.</p>
-                        </div>
-                        <div className='items-end mt-auto'>
-                            <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language written on-top of C#.</p>
-                        </div>
-                        <a href='https://github.com/pledp/pLdev'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+                <Project className='rounded-2xl p-6 flex flex-col pattern-zig text-white gap-12 move-on-hover'>
+                    <div className='flex flex-col gap-5'>
+                        <h1 className='font-bold text-6xl'>smeagl</h1>
+                        <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
+                    </div>
+                    <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
+                    <a href='https://github.com/pledp/pledGL'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
 
-                    </Project>
-                </div>
-                <div className='flex flex-col gap-6
-                sm:flex-row'>
-                    <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black gap-10 h-full w-full move-on-hover pattern-tri'>
-                        <div className='flex flex-col gap-5 pt-5'>
-                            <h1 className='font-bold text-5xl'>Clawmarks</h1>
-                            <p>1st year uni project, a <span className='font-bold'>web-based puzzle game</span>.</p>
-                        </div>
-                        <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
-                        <div className='flex flex-col gap-4'>
-                            <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
-                            <p className='text-right'>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
-                            <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
-                        </div>
-                        <a href='https://github.com/pledp/clawmarks'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
-                    </Project>
-                </div>
+                </Project>
+                
+                <Project className='rounded-2xl p-6 flex flex-col gap-12 h-full bg-white text-black move-on-hover selected-project'>
+                    <div className='items-end text-right flex flex-col gap-5'>
+                        <h1 className='font-bold text-6xl'>robot.r</h1>
+                        <p>a programming game built for an internship.</p>
+                    </div>
+                    <div className='items-end mt-auto'>
+                        <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language written on-top of C#.</p>
+                    </div>
+                    <a href='https://github.com/pledp/pLdev'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+
+                </Project>
+
+                <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black h-full w-full move-on-hover pattern-tri gap-8'>
+                    <div className='flex flex-col gap-5 pt-5'>
+                        <h1 className='font-bold text-5xl'>Clawmarks</h1>
+                        <p>1st year uni project, a <span className='font-bold'>web-based puzzle game</span>.</p>
+                    </div>
+                    <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
+                    <Expandable>
+                    <div className='flex flex-col gap-4'>
+                        <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
+                        <p>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
+                        <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
+                    </div>
+                    </Expandable>
+                    <a href='https://github.com/pledp/clawmarks'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+                </Project>
                 <h1 className='font-bold'>+ other smaller stuff*</h1>
             </div>
 
