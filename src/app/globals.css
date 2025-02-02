@@ -78,3 +78,7 @@ Image {
 .dot {
   mix-blend-mode: mix;
 }
+
+.to-expandable {
+  --tw-gradient-to: #ddffaa;
+}

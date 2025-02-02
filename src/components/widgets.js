@@ -103,20 +103,24 @@ const Widgets = () => {
 
                 </Project>
 
-                <Project className='rounded-2xl p-6 flex flex-col bg-green-100 pattern-wave text-black h-full w-full move-on-hover pattern-tri gap-8'>
-                    <div className='flex flex-col gap-5 pt-5'>
-                        <h1 className='font-bold text-5xl'>Clawmarks</h1>
-                        <p>1st year uni project, a <span className='font-bold'>web-based puzzle game</span>.</p>
+                <Project className='rounded-b-xl bg-green-100 pattern-wave text-black h-full w-full pattern-tri'>
+                    <div className='p-6 flex flex-col gap-8 mt-8'>
+                        <div className='flex flex-col gap-5'>
+                            <div className='flex flex-row gap-8'>
+                                <h1 className='font-bold text-5xl'>Clawmarks</h1>
+                                <a className="w-14 ml-auto" href='https://github.com/pledp/clawmarks'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+                            </div>
+                            <p>1st year uni project, a <span className='font-bold'>web-based puzzle game</span>.</p>
+                        </div>
+                        <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
                     </div>
-                    <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
                     <Expandable>
-                    <div className='flex flex-col gap-4'>
-                        <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
-                        <p>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
-                        <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
-                    </div>
+                        <div className='flex flex-col gap-4 mb-14'>
+                            <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
+                            <p>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
+                            <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
+                        </div>
                     </Expandable>
-                    <a href='https://github.com/pledp/clawmarks'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
                 </Project>
                 <h1 className='font-bold'>+ other smaller stuff*</h1>
             </div>
