@@ -82,3 +82,9 @@ Image {
 .to-expandable {
   --tw-gradient-to: #ddffaa;
 }
+
+.project-list {
+  list-style: square;
+  padding: 20px;
+  margin-left: 20px;
+}

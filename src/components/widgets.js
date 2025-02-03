@@ -3,6 +3,7 @@ import Image from "next/image";
 import FadeInSection from './scroll-effect-component';
 import Project from './project-component';
 import Expandable from './expandable-component';
+import LightBox from './lightbox';
 
 const Widgets = () => {
     return (
@@ -117,8 +118,18 @@ const Widgets = () => {
                     <Expandable>
                         <div className='flex flex-col gap-4 mb-14'>
                             <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
-                            <p>tasks periodically appear. the players job is write a command completing the task as fast as possible to gain points. tasks range from changing an airplanes altitude, to confirming their landing.</p>
+                            <p>flights periodically appear. the players job is complete the tasl associated with the flight as fast as possible. the player completes task by inputing a command.</p>
+                            <p>tasks range from changing an airplanes altitude, to confirming their landing.</p>
+                            <ul className='project-list'>
+                                <li>altering altitude</li>
+                                <li>clearing landing and takeoff</li>
+                                <li>altering heading</li>
+                            </ul>
                             <p>occasionally events, which you have to deal with, appear, such as a fire or a crash on the airport.</p>
+                            <LightBox slides={[
+                                { src: "/portfolio/images/clawmarks-1.png" }, 
+                                { src: "/portfolio/images/clawmarks-2.png" }
+                            ]}/>
                         </div>
                     </Expandable>
                 </Project>

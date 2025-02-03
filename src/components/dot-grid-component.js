@@ -49,7 +49,6 @@ const StaggeredGrid = ({className = ""}) => {
     }, []);
 
     const dots = Array.from({ length: GRID_HEIGHT * GRID_WIDTH });
-    console.log(className);
     return (
         <div
             className={`${className}`}
