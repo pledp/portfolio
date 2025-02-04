@@ -5,14 +5,14 @@ import { ChevronDown } from "lucide-react";
 import Lightbox from 'yet-another-react-lightbox';
 import "yet-another-react-lightbox/styles.css"
 
-export default function Expandable({ title, children }) {
+export default function Expandable({ title, children, className = '' }) {
   const [isOpen, setIsOpen] = useState(false);
   
   return (
     <div>
       <div className={`relative transition-[max-height] duration-300 overflow-hidden delay-0 rounded-r-xl rounded-b-xl ${isOpen ? "max-h-screen" : "max-h-20"}`}>
         <div className="px-6">{children}</div>
-        <div className={`absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-transparent to-expandable ${isOpen ? "hidden" : "inline"}`}></div>
+        <div className={`absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-b from-transparent ${className} ${isOpen ? "hidden" : "inline"}`}></div>
       </div>
       <button
         onClick={() => {

@@ -81,28 +81,49 @@ const Widgets = () => {
             <FadeInSection className='fade-delay'> <h1 className='text-3xl font-bold'>other stuff i've done</h1> </FadeInSection>
         
             <div className='flex flex-col w-full gap-6'>
+                <div className='flex flex-col gap-6
+                sm:flex-row'>
+                    <Project className='rounded-2xl p-6 flex flex-col pattern-zig text-white gap-12 move-on-hover h-full'>
+                        <div className='flex flex-col gap-5'>
+                            <div className='flex flex-row items-center'>
+                                <h1 className='font-bold text-6xl'>smeagl</h1>
+                                <a className='w-14 ml-auto' href='https://github.com/pledp/pledGL'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
+                            </div>
+                            <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
+                        </div>
+                        <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
 
-                <Project className='rounded-2xl p-6 flex flex-col pattern-zig text-white gap-12 move-on-hover'>
-                    <div className='flex flex-col gap-5'>
-                        <h1 className='font-bold text-6xl'>smeagl</h1>
-                        <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
-                    </div>
-                    <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
-                    <a href='https://github.com/pledp/pledGL'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
+                    </Project>
+                    
+                    <Project className='rounded-2xl bg-white text-black move-on-hover h-full'>
+                        <div className='p-6 flex flex-col gap-8'>
+                            <div className='flex flex-row gap-5 w-full'>
+                                <div className="flex-row flex gap-6 w-full items-center">
+                                    <a className="w-14" href='https://github.com/pledp/pLdev'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
+                                    <h1 className='font-bold text-6xl ml-auto'>robot.r</h1>
+                                </div>
+                            </div>
 
-                </Project>
-                
-                <Project className='rounded-2xl p-6 flex flex-col gap-12 h-full bg-white text-black move-on-hover selected-project'>
-                    <div className='items-end text-right flex flex-col gap-5'>
-                        <h1 className='font-bold text-6xl'>robot.r</h1>
-                        <p>a programming game built for an internship.</p>
-                    </div>
-                    <div className='items-end mt-auto'>
-                        <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language written on-top of C#.</p>
-                    </div>
-                    <a href='https://github.com/pledp/pLdev'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo.svg" width="50" height="50" alt="Github logo"></Image></a>
-
-                </Project>
+                            <p>written in <span className='font-bold'>C#</span> with MonoGame. your goal is to complete challenges with a built-in custom programming language written on-top of C#.</p>
+                        </div>
+                        <Expandable className='to-expandable-white'>
+                            <div className='flex flex-col gap-4 mb-14'>
+                                <p>the game consists of 9 programming challenges, which vary from assigning variables, to building loops.</p>
+                                <p>the game was built for a programming workshop for grade-school students. completed with:</p>
+                                <ul className='project-list'>
+                                    <li>syntax highlighting</li>
+                                    <li>error messages</li>
+                                    <li>"documentation"</li>
+                                </ul>
+                                <p>earlier project, gameplay doesn't offer much variance. (just don't read the source code...)</p>
+                                <LightBox slides={[
+                                    { src: "/portfolio/images/robotr-1.png" }, 
+                                    { src: "/portfolio/images/robotr-2.png" }
+                                ]}/>
+                            </div>
+                        </Expandable>
+                    </Project>
+                </div>
 
                 <Project className='rounded-b-xl bg-green-100 pattern-wave text-black h-full w-full pattern-tri'>
                     <div className='p-6 flex flex-col gap-8 mt-8'>
@@ -115,10 +136,10 @@ const Widgets = () => {
                         </div>
                         <p>written with <span className='font-bold'>JavaScript using Phaser</span>. it uses a server written in Python that looks up different airports from a database and saves progress in the database  (don't ask why).</p>
                     </div>
-                    <Expandable>
+                    <Expandable className='to-expandable-green'>
                         <div className='flex flex-col gap-4 mb-14'>
                             <p>you work as a air-traffic-controller, and your objective is to guide airplanes on their journey.</p>
-                            <p>flights periodically appear. the players job is complete the tasl associated with the flight as fast as possible. the player completes task by inputing a command.</p>
+                            <p>flights periodically appear. the players job is complete the task associated with the flight as fast as possible. the player completes task by inputing a command.</p>
                             <p>tasks range from changing an airplanes altitude, to confirming their landing.</p>
                             <ul className='project-list'>
                                 <li>altering altitude</li>

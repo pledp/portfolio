@@ -79,8 +79,12 @@ Image {
   mix-blend-mode: mix;
 }
 
-.to-expandable {
+.to-expandable-green {
   --tw-gradient-to: #ddffaa;
+}
+
+.to-expandable-white {
+  --tw-gradient-to: #ffffff;
 }
 
 .project-list {
