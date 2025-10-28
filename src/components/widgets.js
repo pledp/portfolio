@@ -56,7 +56,7 @@ const Widgets = () => {
                             </div>
                         </div>
 
-                        <h1 className='text-black text-xl font-bold'>+ other misc stuff*</h1>
+                        <h1 className='text-black text-xl font-bold'>+ other misc stuff* <span className='text-sm'>(i'm a risk management iso 14971 genius)</span></h1>
                     </FadeInSection>
                 </div>
             </div>
@@ -71,7 +71,7 @@ const Widgets = () => {
                     <p>a work-in-progress game framework/engine.</p>
                 </div>
                 <div className='items-end mt-auto'>
-                    <p>written in <span className='font-bold'>Rust</span> with winit and wgpu. written mostly as a Rust-learning-project. currently working on implementing plugins and ECS-type capabilities.</p>
+                    <p>written in <span className='font-bold'>Rust</span> with winit and wgpu. written mostly as a Rust-learning-project. trying to implement cool modular features in a simple fashion.</p>
                 </div>
                 <a href='https://github.com/pledp/moegl'><Image className="transition-transform duration-300 ease-in-out hover:scale-110" src="/portfolio/images/github-logo-white.svg" width="50" height="50" alt="Github logo"></Image></a>
             </Project>
@@ -92,6 +92,7 @@ const Widgets = () => {
                             <p>a (very) minimal game framework written in <span className='font-bold'>C++</span>.</p>
                         </div>
                         <p>C++ learning project, built with SDL2 and OpenGL. implements basic graphics, such as quads and triangles with textures and shaders. also implements simple input.</p>
+                        <p>i now understand the pain of CMake and build systems and such</p>
 
                     </Project>
                     
@@ -154,7 +155,7 @@ const Widgets = () => {
                         </div>
                     </Expandable>
                 </Project>
-                <h1 className='font-bold'>+ other smaller stuff*</h1>
+                <h1 className='font-bold'>+ other smaller stuff* <span className='text-sm'>(smaller networking applications)</span></h1>
             </div>
 
             <FadeInSection className='h-2 bg-white w-1/2 mx-auto rounded-2xl fade-delay m-10'></FadeInSection>

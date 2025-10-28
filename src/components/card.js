@@ -12,16 +12,20 @@ const Card = () => {
                 </div>
 
                 {/* Bottom Half - Content */}
-                <h2 className="text-3xl font-bold  mb-2">L-E. J.<span className='italic text-3xl px-6'>"pled"</span>T</h2>
+                <h2 className="text-3xl font-bold  mb-2">Lars<span className='italic pl-10 text-3xl'>"pled"</span></h2>
                 <p className=" mb-4">
                 i major in biomedical engineering.
                 </p>
                 <p className="mb-4 pt-5">
-                i occasionally try to do some application/systems programming with rust or c/c++. mostly in the context of scuffed game frameworks/engines.
+                i occasionally try to do some application/systems programming with rust or c/c++.
                 </p>
-                <p className="mb-4 pt-5">
-                design patterns cool, try implement.
-                </p>
+                <div className="mb-4 p-5 mt-5 text-black bg-white rounded-2xl ">
+                    <h1 className="text-xl font-bold bg-green text-orange-100">famous quotes</h1>
+                    <div className="flex flex-col gap-3 mt-5">
+                        <p className="italic">"oop sucks, procedural rocks"</p>
+                        <p className="italic">"cmake sucks, cargo rocks"</p>
+                    </div>
+                </div>
             </div>
         </FadeInSection>
     )
